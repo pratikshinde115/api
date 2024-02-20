@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django</title>
+</head>
+<body>
+
+    {% load socialaccount %} 
+
+    <h3>google login</h3>
+    <a href="{% provider_login_url 'google' %}">google Connect</a>
+
+    {% if user.is_authenticated %}
+    <p>you are signin {{user.email}}</p>
+    <a href="logout">logout</a>
+    {% endif%}
+    
+</body>
+</html>
